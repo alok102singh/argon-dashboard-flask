@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 """
-Copyright (c) 2019 - present AppSeed.us
+Copyright (c) 2024 - present CDNX Texhnologies
 """
 
 import os
@@ -31,4 +31,5 @@ def verify_pass(provided_password, stored_password):
                                   salt.encode('ascii'),
                                   100000)
     pwdhash = binascii.hexlify(pwdhash).decode('ascii')
+    print(pwdhash)
     return pwdhash == stored_password

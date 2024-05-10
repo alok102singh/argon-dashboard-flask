@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Generic Builder",
     "main": "gulpfile.js",
-    "author": "AppSeed",
+    "author": "CDNX Technologies",
     "keywords": [
         "css",
         "sass",
@@ -16,7 +16,7 @@
         "url": "https://github.com/app-generator"
     },
     "bugs": {
-        "email": "support@appseed.us"
+        "email": "alok@cdnxtech.com"
     },
     "license": "MIT License",
     "devDependencies": {

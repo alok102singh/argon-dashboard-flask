@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 """
-Copyright (c) 2019 - present AppSeed.us
+Copyright (c) 2024 - present CDNX Texhnologies
 """
 
 from flask import render_template, redirect, request, url_for
@@ -36,7 +36,7 @@ def login():
 
         # Locate user
         user = Users.query.filter_by(username=username).first()
-
+        print(user.username, user.email, user.password)
         # Check the password
         if user and verify_pass(password, user.password):
 
