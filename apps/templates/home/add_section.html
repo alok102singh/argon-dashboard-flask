@@ -1,0 +1,66 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Profile {% endblock title %}
+
+{% block content %}
+
+    <!-- Page content -->
+    <div class="container-fluid" style="margin-top: 20px">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">Add/Update Section </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form role="form" action="/add_section" method="post">
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="section">Name</label>
+                                            <input type="text" id="section" name="section" class="form-control"
+                                                   placeholder="Section name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="grade">Section</label>
+                                            <select class="form-control" id="grade" name="grade">
+                                                {% for grade in grades %}
+                                                    <option value="{{ grade.id }}">{{ grade.grade }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="status">Status</label>
+                                            <select class="form-control" id="status" name="status">
+                                                <option value="active">Active</option>
+                                                <option value="inactive">InActive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-4"/>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary my-4">Add Section</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include "includes/footer.html" %}
+    </div>
+
+{% endblock content %}
+<!-- Specific JS goes HERE -->
+{% block javascripts %}{% endblock javascripts %}
+

@@ -1,0 +1,139 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Profile {% endblock title %}
+
+{% block content %}
+
+    <!-- Page content -->
+    <div class="container-fluid" style="margin-top: 20px">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">Add/Update Student </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form role="form" action="/add_student" method="post">
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="name">Name</label>
+                                            <input type="text" id="name" name="name" class="form-control"
+                                                   placeholder="Student Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="father_name">Father Name</label>
+                                            <input type="text" id="father_name" name="father_name" class="form-control"
+                                                   placeholder="Father Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="father_mobile">Father Mobile
+                                                No.</label>
+                                            <input type="text" id="father_mobile" name="father_mobile"
+                                                   class="form-control"
+                                                   placeholder="Mother Mobile No.">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="mother_name">Mother Name</label>
+                                            <input type="text" id="mother_name" name="mother_name" class="form-control"
+                                                   placeholder="Mother Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="mother_mobile">Mother Mobile
+                                                No</label>
+                                            <input type="text" id="mother_mobile" name="mother_mobile"
+                                                   class="form-control"
+                                                   placeholder="Mother Mobile Number">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="address1">Address 1</label>
+                                            <input type="text" id="address1" name="address1" class="form-control"
+                                                   placeholder="Address 1">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="address2">Address 2</label>
+                                            <input type="text" id="address2" name="address2" class="form-control"
+                                                   placeholder="Address 2">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="city">City</label>
+                                            <input type="text" id="city" name="city" class="form-control"
+                                                   placeholder="City">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="state">State</label>
+                                            <input type="text" id="state" name="state" class="form-control"
+                                                   placeholder="State">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="pin_code">Pin Code</label>
+                                            <input type="text" id="pin_code" name="pin_code" class="form-control"
+                                                   placeholder="Pin Code">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="dob">DOB</label>
+                                            <input type="text" id="dob" name="dob" class="form-control"
+                                                   placeholder="DOB">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="status">Status</label>
+                                            <select class="form-control" id="status" name="status">
+                                                <option value="active">Active</option>
+                                                <option value="inactive">InActive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-4"/>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary my-4">Add Student</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include "includes/footer.html" %}
+    </div>
+
+{% endblock content %}
+<!-- Specific JS goes HERE -->
+{% block javascripts %}{% endblock javascripts %}
+

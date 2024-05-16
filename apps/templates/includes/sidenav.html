@@ -1,78 +1,121 @@
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
-  <div class="scrollbar-inner">
-    <!-- Brand -->
-    <div class="sidenav-header  align-items-center">
-      <a class="navbar-brand" href="/">
-        <img src="/static/assets/img/brand/blue.png" class="navbar-brand-img" alt="Student Management System">
-      </a>
+    <div class="scrollbar-inner">
+        <!-- Brand -->
+        <div class="sidenav-header  align-items-center">
+            <a class="navbar-brand" href="/">
+                <img src="/static/assets/img/brand/blue.png" class="navbar-brand-img" alt="Student Management System">
+            </a>
+        </div>
+        <div class="navbar-inner">
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                <!-- Nav items -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link {% if 'index' in segment %} active {% endif %}" href="/">
+                            <i class="ni ni-tv-2 text-primary"></i>
+                            <span class="nav-link-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if 'students' in segment %} active {% endif %}" href="/students.html">
+                            <i class="ni ni ni-single-02 text-orange "></i>
+                            <span class="nav-link-text">Students</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if 'fee_collection' in segment %} active {% endif %}"
+                           href="/fee_collection.html">
+                            <i class="ni ni-collection text-blue"></i>
+                            <span class="nav-link-text">Fee Collection</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if 'fee_type' in segment %} active {% endif %}" href="/fee_type.html">
+                            <i class="ni ni-settings text-primary"></i>
+                            <span class="nav-link-text">Fee Type</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Divider -->
+                <hr class="my-3">
+                <!-- Heading -->
+                <h6 class="navbar-heading p-0 text-muted">
+                    <span class="docs-normal">Students</span>
+                </h6>
+                <!-- Navigation -->
+                <ul class="navbar-nav mb-md-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if 'student' in segment %} active {% endif %}" href="/student">
+                            <i class="ni ni-single-02 text-purple"></i>
+                            <span class="nav-link-text">Student</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if 'grade' in segment %} active {% endif %}" href="/grade">
+                            <i class="ni ni-app text-purple"></i>
+                            <span class="nav-link-text">Grade</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if 'section' in segment %} active {% endif %}" href="/section">
+                            <i class="ni ni-archive-2 text-purple"></i>
+                            <span class="nav-link-text ">Section</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if 'blood_group' in segment %} active {% endif %}" href="/blood_group">
+                            <i class="ni ni-basket text-purple"></i>
+                            <span class="nav-link-text ">Blood Group</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if 'religious' in segment %} active {% endif %}" href="/religious">
+                            <i class="ni ni-atom text-purple"></i>
+                            <span class="nav-link-text ">Religious</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <!-- Divider -->
+                <hr class="my-3">
+                <!-- Heading -->
+                <h6 class="navbar-heading p-0 text-muted">
+                    <span class="docs-normal">Reports</span>
+                </h6>
+                <!-- Navigation -->
+                <ul class="navbar-nav mb-md-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="#">
+                            <i class="ni ni-single-copy-04 text-purple"></i>
+                            <span class="nav-link-text">Students</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="#">
+                            <i class="ni ni-single-copy-04 text-purple"></i>
+                            <span class="nav-link-text ">Fee Collected</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="#">
+                            <i class="ni ni-single-copy-04 text-purple"></i>
+                            <span class="nav-link-text ">Pending Student Fee</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="navbar-inner">
-      <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-        <!-- Nav items -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link {% if 'index' in segment %} active {% endif %}" href="/">
-              <i class="ni ni-tv-2 text-primary"></i>
-              <span class="nav-link-text">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if 'students' in segment %} active {% endif %}" href="/students.html">
-              <i class="ni ni ni-single-02 text-orange "></i>
-              <span class="nav-link-text">Students</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if 'fee_collection' in segment %} active {% endif %}" href="/fee_collection.html">
-              <i class="ni ni-collection text-blue"></i>
-              <span class="nav-link-text">Fee Collection</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {% if 'fee_type' in segment %} active {% endif %}" href="/fee_type.html">
-              <i class="ni ni-settings text-primary"></i>
-              <span class="nav-link-text">Fee Type</span>
-            </a>
-          </li>
-        </ul>
-        <!-- Divider -->
-        <hr class="my-3">
-        <!-- Heading -->
-        <h6 class="navbar-heading p-0 text-muted">
-          <span class="docs-normal">Reports</span>
-        </h6>
-        <!-- Navigation -->
-        <ul class="navbar-nav mb-md-3">
-
-          <li class="nav-item">
-            <a class="nav-link" 
-               target="_blank" 
-               href="https://www.creative-tim.com/product/argon-dashboard-flask">
-              <i class="ni ni-single-copy-04 text-purple"></i>
-              <span class="nav-link-text">Students</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" 
-               target="_blank" 
-               href="https://appseed.us/admin-dashboards/flask-dashboard-argon-pro">
-              <i class="ni ni-single-copy-04 text-purple"></i>
-              <span class="nav-link-text ">Fee Collected</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"
-               target="_blank"
-               href="https://appseed.us/admin-dashboards/flask-dashboard-argon-pro">
-              <i class="ni ni-single-copy-04 text-purple"></i>
-              <span class="nav-link-text ">Pending Student Fee</span>
-            </a>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </div>
 </nav>
